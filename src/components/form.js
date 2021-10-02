@@ -12,22 +12,26 @@ const Form = () => {
         setTxt("")
     }
 
-    const itemsList = () => {
-        setItems((prevItems) => {
-            return [...prevItems, txt]
-        })
-        setTxt("")
+    const addItems = () => {
+        if(!txt){
+            alert("FIELD CAN NOT BE EMPTY")
+        }else {
+            setItems([...items, txt]);
+            setTxt("")
+        } 
     }
 
     return (
         <div>
             <form>
                 <input type="text" value={txt} onChange={updatetxt}/>
-                <button onClick={itemsList}>Add</button>
+                <button onClick={addItems}>Add</button>
                 <button onClick={cleartxt}>Clear</button>
             </form>
-            {items.map((look)=>{
-                return <p key={look}>{look}</p>
+            {items.map((look, ind)=>{
+                return (
+                    <h3>{look}</h3>
+                )
             })}
         </div>
     )

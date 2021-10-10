@@ -1,20 +1,19 @@
-import React, { useState } from "react";
-import './App.css';
+import React from "react";
 import Form from './components/form';
 
 function App() {
-  const initialValue = [
+/*   const initialValue = [
     "Star Wars", "Return of the Jedi", "Empire Strikes Back",
   ]
   
-  const [ movies, setMovies ] = useState(initialValue);
+  const [ movies, setMovies ] = useState(initialValue); */
+
   return (
     <div className="App">
-      <h1>My To Do list</h1>
       <Form />
-      {movies.map((movie) => {
+   {/*    {movies.map((movie) => {
        return <div key={movie}>{movie}</div>;
-     })}
+     })} */}
     </div>
   );
 }
